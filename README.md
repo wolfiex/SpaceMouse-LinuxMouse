@@ -15,3 +15,11 @@ If this program is useful, please reference wolfiex (git) or Dan Ellis @DanEllis
 
 ## run program 
 `./simple*`
+
+
+
+## To Do:
+
+- Nonlinear response functions
+- editable command interface
+- User list
