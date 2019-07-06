@@ -22,9 +22,13 @@ If this program is useful, please reference wolfiex (git) or Dan Ellis @DanEllis
 ## Current config
 
 . x-z axis - mouse move
+
 . y axis down - click
+
 . button 1 - next app 
+
 . button 0 - previous app? next tab?
+
 . y axis up - tbc
 
 ## To Do:
