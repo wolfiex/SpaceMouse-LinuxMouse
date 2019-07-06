@@ -20,6 +20,7 @@ If this program is useful, please reference wolfiex (git) or Dan Ellis @DanEllis
 
 ## To Do:
 
-- Nonlinear response functions
-- editable command interface
-- User list
+- Nonlinear response functions (short)
+- editable command interface (medium)
+- User list / Guestbook (short)
+- Customisable program interfaces (longer)
