@@ -1,3 +1,11 @@
+/*
+This script is free to use for non profit applicaitons. It is an adaption of the simple test from spacenav to add mouse functionality. 
+If it is used the current header must be included, unchanged and reference given to Daniel Ellis - wolfiex (github) or @DanEllisScience (twitter)
+
+
+Author : Dan Ellis
+/*
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <signal.h>
