@@ -4,7 +4,7 @@ If it is used the current header must be included, unchanged and reference given
 
 
 Author : Dan Ellis
-/*
+*/
 
 #include <stdio.h>
 #include <stdlib.h>
