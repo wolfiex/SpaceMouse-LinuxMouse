@@ -1,5 +1,5 @@
 /*
-This script is free to use for non profit applicaitons. It is an adaption of the simple test from spacenav to add mouse functionality. 
+This script is free to use for non profit applicaitons. It is an adaption of the simple test from spacenav to add mouse functionality.
 If it is used the current header must be included, unchanged and reference given to Daniel Ellis - wolfiex (github) or @DanEllisScience (twitter)
 
 
@@ -12,8 +12,8 @@ Author : Dan Ellis
 #include <X11/Xlib.h>
 #include <spnav.h>
 #include <X11/extensions/XTest.h>//button
-
 #include <unistd.h>//sleep
+#include <math.h>
 
 void sig(int s)
 {
@@ -66,7 +66,11 @@ int main(void)
 			Window blah;
 			int win_x;
 			int win_y;
-			int div = 10;
+			float mply;
+			float xm;
+			float ym;
+			int div = 1;
+			float axismax = 3000;
 			int scroll = 100;
 			int click = -170;
 			int rt,dir;
@@ -76,7 +80,7 @@ int main(void)
 			XSelectInput(dpymove, root_window, KeyReleaseMask);
 
 
-
+			mply =  (axismax/div); // update div as a multiplier of 0-1 div tan(1.3*x) values
 
 //x11 windows causes errors - temrinal atom
 
@@ -133,7 +137,13 @@ XQueryPointer(dpymove, DefaultRootWindow(dpymove), &root_window, &blah, &win_x, 
 
 printf("Mouse coordinates (X: %d, Y: %d)\n", win_x, win_y);
 
-			XWarpPointer(dpymove, None, root_window,None,None,None,None,win_x + sev.motion.x/div, win_y - sev.motion.z/div);
+			xm = sev.motion.x/axismax ;
+			ym = sev.motion.z/axismax ;
+			XWarpPointer(dpymove, None, root_window,None,None,None,None,win_x +
+				 mply*(tan(xm)*fabs(xm)), win_y -
+					 mply*(tan(ym)*fabs(ym))
+					);
+			// cubic response
 
 
 }

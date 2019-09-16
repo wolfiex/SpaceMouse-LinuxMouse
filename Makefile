@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -pedantic -Wall -g -I../.. -I/usr/local/include
-LDFLAGS = -L../.. -L/usr/local/lib -lspnav -lX11 -lXtst
+LDFLAGS = -L../.. -L/usr/local/lib -lspnav -lX11 -lXtst -lm
 
 .PHONY: all
 all: simple_x11 simple_af_unix
@@ -15,7 +15,7 @@ install:
 
 start:
 	sudo spaceavd
-	
+
 .PHONY: clean
 clean:
 	rm -f simple_x11 simple_af_unix
